@@ -20,13 +20,13 @@ std::size_t partition(Type *A, std::size_t p, std::size_t r)
 
 
 template <class Type>
-void quicksort(Type *A, std::size_t p, std::size_t r)
+void quick_sort(Type *A, std::size_t p, std::size_t r)
 {
 	if (p < r)
 	{
 		std::size_t q = partition(A, p, r);
 		if (p != q)
-			quicksort(A, p, q-1);
-		quicksort(A, q+1, r);
+			quick_sort(A, p, q-1);
+		quick_sort(A, q+1, r);
 	}
 }
