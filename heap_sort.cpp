@@ -3,8 +3,9 @@
 template <typename Type>
 void	max_heapify(Type *p, std::size_t i, std::size_t size)
 {
-
-	Type l = 2*i+1, r = 2*i+2, largest;
+	std::size_t l = 2 * i + 1;
+	std::size_t r = 2 * i + 2;
+	std::size_t largest;
 
 	if (l <= size-1 && p[l] > p[i])
 		largest = l;
